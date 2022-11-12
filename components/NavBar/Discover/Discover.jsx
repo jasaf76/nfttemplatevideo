@@ -1,11 +1,54 @@
-import React from 'react'
+import React from "react";
+import Link from "next/link";
+
+//INTERNAL IMPORT
+import Style from "./Discover.module.css";
 
 const Discover = () => {
+  //--------DISCOVER NAVIGATION MENU
+  const discover = [
+    {
+      name: "Collection",
+      link: "collection",
+    },
+    {
+      name: "Suchen",
+      link: "searchPage",
+    },
+    {
+      name: "Author Profile",
+      link: "author",
+    },
+    {
+      name: "NFT Details",
+      link: "NFT-details",
+    },
+    {
+      name: "Account Settings",
+      link: "account",
+    },
+    {
+      name: "Upload NFT",
+      link: "uploadNFT",
+    },
+    {
+      name: "Verbinden Wallet",
+      link: "connectWallet",
+    },
+    {
+      name: "Blog",
+      link: "blog",
+    },
+  ];
   return (
     <div>
-      Discover
+      {discover.map((el, i) => (
+        <div key={i + 1} className={Style.discover}>
+          <Link href={{ pathname: `${el.link}` }}>{el.name}</Link>
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Discover
+export default Discover;
