@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
 
         <div className={Style.footer_box_discover}>
-          <h3>Discover</h3>
+          <h3>Entdecken</h3>
           <Discover />
         </div>
 
