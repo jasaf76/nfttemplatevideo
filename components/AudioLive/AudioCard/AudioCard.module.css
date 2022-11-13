@@ -90,8 +90,9 @@ transition:  all .3s ease-in;
 }
 
 .audioCard_box_img{
-    grid-column: 1 / -1;
+    grid-column: 1/ -1;
     grid-row:  1 / -1;
+
 }
 
 .audioCard_box_details{

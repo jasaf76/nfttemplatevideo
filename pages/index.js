@@ -13,6 +13,9 @@ import {
   Collection,
   FollowerTab,
   AudioLive,
+  Slider,
+  Brand,
+  Video
 } from "../components/componentsindex";
 const Home = () => {
   return (
@@ -20,9 +23,17 @@ const Home = () => {
       <HeroSection />
       <Service />
       <BigNFTSilder />
-
+      <Title
+        heading="Audio Kollektion"
+        paragraph="Erforschen Sie die NFTs die für Sie wie Mozart für mich klingen"
+      />
       <AudioLive />
       <FollowerTab />
+      <Title
+        heading=" Endecken Sie die besten NFTs Audio"
+        paragraph="Erforschen Sie die NFTs in der meistbesuchten audio Kategorie"
+      />
+      <Slider />
       <Collection />
       <Filter />
       <NFTCard />
@@ -32,6 +43,8 @@ const Home = () => {
       />
       <Category />
       <Subscribe />
+      <Brand />
+      <Video/>
     </div>
   );
 };

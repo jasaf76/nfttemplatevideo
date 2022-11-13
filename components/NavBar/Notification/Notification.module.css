@@ -53,13 +53,13 @@
 
 .notification_box_info p{
     font-size: 15px;
-    line-height: .3;
+    line-height: .9;
     position: relative;
 }
 
 .notification_box_new{
     width: .5rem;
-    height: .5rem;
+    height: .6rem;
     border-radius: 50%;
     background-color: var(--icons-color);
 }
@@ -67,7 +67,7 @@
 @media screen and (max-width: 35em) {
     .notification{
         width: 21rem;
-        left: -11rem;
+        left: -11rem; 
     }
     .notification_box{
         padding: .3rem;

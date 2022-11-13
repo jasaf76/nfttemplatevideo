@@ -108,7 +108,7 @@ const BigNFTSilder = () => {
                 height={50}
               />
               <div className={Style.bigNFTSlider_box_left_creator_profile_info}>
-                <p>Creator</p>
+                <p>Künstler</p>
                 <h4>
                   {sliderData[idNumber].name}{" "}
                   <span>
@@ -126,7 +126,7 @@ const BigNFTSilder = () => {
               <div
                 className={Style.bigNFTSlider_box_left_creator_collection_info}
               >
-                <p>Collection</p>
+                <p>Kollektion</p>
                 <h4>{sliderData[idNumber].collection}</h4>
               </div>
             </div>
@@ -134,7 +134,7 @@ const BigNFTSilder = () => {
 
           <div className={Style.bigNFTSlider_box_left_bidding}>
             <div className={Style.bigNFTSlider_box_left_bidding_box}>
-              <small>Current Bid</small>
+              <small>Aktuelles Angebot</small>
               <p>
                 {sliderData[idNumber].price} <span>$221,21</span>
               </p>
@@ -144,7 +144,7 @@ const BigNFTSilder = () => {
               <MdTimer
                 className={Style.bigNFTSlider_box_left_bidding_box_icon}
               />
-              <span>Auction ending in</span>
+              <span>Auktion endet in</span>
             </p>
 
             <div className={Style.bigNFTSlider_box_left_bidding_box_timer}>
@@ -152,34 +152,34 @@ const BigNFTSilder = () => {
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
                 <p>{sliderData[idNumber].time.days}</p>
-                <span>Days</span>
+                <span>Tagen</span>
               </div>
 
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
                 <p>{sliderData[idNumber].time.hours}</p>
-                <span>Hours</span>
+                <span>Stunden</span>
               </div>
 
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
                 <p>{sliderData[idNumber].time.minutes}</p>
-                <span>mins</span>
+                <span>Minuten</span>
               </div>
 
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
                 <p>{sliderData[idNumber].time.seconds}</p>
-                <span>secs</span>
+                <span>Sekunden</span>
               </div>
             </div>
 
             <div className={Style.bigNFTSlider_box_left_button}>
-              <Button btnName="Place" handleClick={() => {}} />
-              <Button btnName="View" handleClick={() => {}} />
+              <Button btnName="Setzen" handleClick={() => {}} />
+              <Button btnName="Sehen" handleClick={() => {}} />
             </div>
           </div>
 
