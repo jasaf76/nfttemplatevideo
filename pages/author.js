@@ -9,11 +9,11 @@ import images from "../img";
 import {
   AuthorProfileCard,
   AuthorTaps,
-  AuthorNFTCardBox,
+   AuthorNFTCardBox,
 } from "../authorPage/componentIndex";
 
-//IMPORT SMART CONTRACT DATA
-import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+// //IMPORT SMART CONTRACT DATA
+// import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 
 const author = () => {
   const followerArray = [
@@ -55,30 +55,18 @@ const author = () => {
   const [follower, setFollower] = useState(false);
   const [following, setFollowing] = useState(false);
 
-  //IMPORT SMART CONTRACT DATA
-  const { fetchMyNFTsOrListedNFTs, currentAccount } = useContext(
-    NFTMarketplaceContext
-  );
+  // //IMPORT SMART CONTRACT DATA
+ 
 
   const [nfts, setNfts] = useState([]);
   const [myNFTs, setMyNFTs] = useState([]);
 
-  useEffect(() => {
-    fetchMyNFTsOrListedNFTs("fetchItemsListed").then((items) => {
-      setNfts(items);
-    });
-  }, []);
-
-  useEffect(() => {
-    fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
-      setMyNFTs(items);
-    });
-  }, []);
+ 
 
   return (
     <div className={Style.author}>
       <Banner bannerImage={images.creatorbackground2} />
-      <AuthorProfileCard currentAccount={currentAccount} />
+       <AuthorProfileCard  />
       <AuthorTaps
         setCollectiables={setCollectiables}
         setCreated={setCreated}
@@ -95,7 +83,7 @@ const author = () => {
         following={following}
         nfts={nfts}
         myNFTS={myNFTs}
-      />
+      /> 
       <Title
         heading="Popular Creators"
         paragraph="Click on music icon and enjoy NTF music or audio

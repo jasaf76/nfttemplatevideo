@@ -16,8 +16,8 @@ const account = () => {
 
   const { getRootProps, getInputProps } = useDropzone({
     onDrop,
-    accept: "image/*",
-    maxSize: 5000000,
+    accept:  "image/*",
+    maxSize: 50000000,
   });
 
   return (

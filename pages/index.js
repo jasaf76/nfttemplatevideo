@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 //INTERNAL IMPORT
 import Style from "../styles/index.module.css";
 import {
@@ -15,9 +15,13 @@ import {
   AudioLive,
   Slider,
   Brand,
-  Video
+  Video,
+  Loader
 } from "../components/componentsindex";
+import { getTopCreators } from "../TopCreators/TopCreators";
 const Home = () => {
+  const [nfts, setNfts] = useState([]);
+  const creators = getTopCreators(nfts);
   return (
     <div className={Style.HomePage}>
       <HeroSection />
@@ -28,14 +32,22 @@ const Home = () => {
         paragraph="Erforschen Sie die NFTs die für Sie wie Mozart für mich klingen"
       />
       <AudioLive />
+      {/* {creators.length == 0 ? (
+        <Loader />
+      ) : (
+        <FollowerTab TopCreator={creators} />
+      )} */}
+      <Slider />
+
+      <Collection />
       <FollowerTab />
       <Title
         heading=" Endecken Sie die besten NFTs Audio"
         paragraph="Erforschen Sie die NFTs in der meistbesuchten audio Kategorie"
       />
-      <Slider />
-      <Collection />
+
       <Filter />
+      {/* {nfts.length == 0 ? <Loader /> : <NFTCard NFTData={nfts} />} */}
       <NFTCard />
       <Title
         heading="Nach Kategorien suchen"
@@ -44,7 +56,7 @@ const Home = () => {
       <Category />
       <Subscribe />
       <Brand />
-      <Video/>
+      <Video />
     </div>
   );
 };
