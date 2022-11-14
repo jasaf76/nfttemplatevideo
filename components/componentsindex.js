@@ -16,6 +16,7 @@ import Slider from "./Slider/Slider";
 import Brand from "./Brand/Brand";
 import Video from "./Video/Video";
 import LikeProfile from "./LikeProfile/LikeProfile";
+import Loader from "./Loader/Loader";
 export {
   Button,
   Footer,
@@ -34,5 +35,6 @@ export {
   Slider,
   Brand,
   Video,
-  LikeProfile
+  LikeProfile,
+  Loader
 };
