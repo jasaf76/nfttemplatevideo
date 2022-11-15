@@ -8,16 +8,16 @@ import { Button } from "../componentsindex";
 import images from "../../img";
 
 //SMART CONTRACT IMPORT
-// import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
+ import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
 
 const HeroSection = () => {
-  // const { titleData } = useContext(NFTMarketplaceContext);
+  const { titleData } = useContext(NFTMarketplaceContext);
   const router = useRouter();
   return (
     <div className={Style.heroSection}>
       <div className={Style.heroSection_box}>
         <div className={Style.heroSection_box_left}>
-          <h1>NFTs entdecken, sammeln und verkaufen 🖼️</h1>
+          <h1>{titleData }🖼️</h1>
           <p>
             Entdecken Sie die herausragendsten NTFs zu allen Themen des Lebens.
             Kreativ Ihre NTFs und verkaufen Sie sie
