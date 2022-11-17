@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState,useContext,useEffect } from "react";
 //INTERNAL IMPORT
 import Style from "../styles/index.module.css";
 import {
@@ -16,12 +16,21 @@ import {
   Slider,
   Brand,
   Video,
-  Loader
+  Loader,
 } from "../components/componentsindex";
 import { getTopCreators } from "../TopCreators/TopCreators";
+//importing contract data
+import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
+
 const Home = () => {
   const [nfts, setNfts] = useState([]);
   const creators = getTopCreators(nfts);
+  const {  } = useContext(NFTMarketplaceContext);
+
+  // useEffect(() => {
+  //   checkContract();
+  // }, []);
+
   return (
     <div className={Style.HomePage}>
       <HeroSection />
