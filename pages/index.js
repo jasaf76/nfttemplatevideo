@@ -25,11 +25,11 @@ import { NFTMarketplaceContext } from "../Context/NFTMarketplaceContext";
 const Home = () => {
   const [nfts, setNfts] = useState([]);
   const creators = getTopCreators(nfts);
-  const {  } = useContext(NFTMarketplaceContext);
+  const {checkIfWalletConnected  } = useContext(NFTMarketplaceContext);
 
-  // useEffect(() => {
-  //   checkContract();
-  // }, []);
+useEffect(() => {
+  checkIfWalletConnected
+}, []);
 
   return (
     <div className={Style.HomePage}>

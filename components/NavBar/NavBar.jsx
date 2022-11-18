@@ -15,7 +15,7 @@ import { Button, Error } from "../componentsindex";
 import images from "../../img";
 
 //IMPORT FROM SMART CONTRACT
-//import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
+import { NFTMarketplaceContext } from "../../Context/NFTMarketplaceContext";
 
 const NavBar = () => {
   //----USESTATE COMPONNTS
@@ -78,9 +78,9 @@ const NavBar = () => {
   };
 
   //SMART CONTRACT SECTION
-  // const { currentAccount, connectWallet, openError } = useContext(
-  //   NFTMarketplaceContext
-  // );
+  const { currentAccount, connectWallet, openError } = useContext(
+    NFTMarketplaceContext
+  );
 
   return (
     <div className={Style.navbar}>
@@ -130,11 +130,22 @@ const NavBar = () => {
           </div>
 
           {/* CREATE BUTTON SECTION */}
-          <div className={Style.navbar_container_right_button}>  <Button
-            btnName="Erstellen"
-            handleClick={() => router.push("/uploadNFT")}
-          /></div>
-        
+          <div className={Style.navbar_container_right_button}>
+            {currentAccount == "" ? (
+              <Button
+                btnName="verbinden"
+                handleClick={() => connectWallet()}
+              />
+            ) : (
+                <Link href={{pathname:"/"}}>
+              <Button
+                btnName="Erstellen"
+                handleClick={() => router.push("/uploadNFT")}
+                  />
+                </Link>
+            )}
+          </div>
+
           {/* USER PROFILE */}
 
           <div className={Style.navbar_container_right_profile_box}>
